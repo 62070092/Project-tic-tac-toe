@@ -1,4 +1,20 @@
+html body{
+    background-color: #5fcb73;
+}
 .home{
-    text-align: center;
+
     margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logo{
+    padding: 4vw 0vw;
+}
+.logo > img{
+    width: 8vw;
+}
+.user-form{
+    width: 25vw;
 }
