@@ -65,6 +65,13 @@ html body{
     
 
 }
+.next{
+    padding: 0.5vw 2vw;
+    border-radius: 30px;
+    border: 3.5px solid #258f2e;
+    background-color: #96e967;
+    font-family: 'Kanit', sans-serif;
+}
 
 .btn-start{
     padding: 0.5vw 5vw;
@@ -80,4 +87,82 @@ html body{
 .head-size{
     font-size: 3rem;
     font-family: 'Kanit', sans-serif;
+}
+
+.normal-text-size{
+    font-size: 2rem;
+}
+
+/* ----------------------------------------------------- */
+.choose-red{
+    padding: 2vw;
+}
+.team-red{
+    display: flex;
+    justify-content: space-between;
+}
+.team-red-reverse{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-right: 70px;
+}
+.pic-team{
+    display: flex;
+}
+.flag-group{
+    display: flex;
+    flex-direction: column;
+}
+.flag{
+    width: 2.5vw;
+}
+.card-group{
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+/* .card-element{
+    background-color: #797979;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+}
+.four-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.card{
+    background-color: #797979;
+}
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #797979;
+}
+.xo-table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 60px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 30%;
+}
+table, td, tr {
+    border: 5px solid #5fcb73 ;
+    background-color: #96e967;
+  }
+
+tr{
+    height: 7vw;
+}
+.pic{
+    width: 70px;
 }
