@@ -2,12 +2,17 @@
 html body{
     background-color: #5fcb73;
 }
-
 .container-page-rule{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+.container-page-select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
 }
 
 .home{
@@ -19,7 +24,7 @@ html body{
 }
 .home > h1{
     font-family: 'Bebas Neue', cursive;
-    font-size: 5vw;
+    font-size: 4rem;
 }
 .page-rule{
     display: flex;
@@ -42,114 +47,122 @@ html body{
     width: 25vw;
 }
 
-.team{
-    padding-top: 20vh;
-}
 .card{
-    width: 10vw;
-    height: 30vh;
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
+    padding: 10px 20px;
+    align-items: center;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
 }
+.team{
+
+    border: 5px solid red;
+    border-radius: 30px;
+}
+
 .char{
     width: 10vw;
     height: 30vh;
     
+
 }
-.box-rule > h3{
+.next{
+    padding: 0.5vw 2vw;
+    border-radius: 30px;
+    border: 3.5px solid #258f2e;
+    background-color: #96e967;
     font-family: 'Kanit', sans-serif;
-    
 }
+
 .btn-start{
     padding: 0.5vw 5vw;
     border-radius: 30px;
     border: 3.5px solid #258f2e;
 }
-
-.all_element{
-    margin-top: 8vh;
+.select-box{
     display: flex;
-    column-gap: 5vw;
-    justify-content: center;   
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.yourteam {
-    margin-top: 5vh;
-    text-align: center;
+.head-size{
+    font-size: 3rem;
+    font-family: 'Kanit', sans-serif;
 }
 
-.wind {
-    height: 50vh;
-    width: 20vw;
-    background-color: #e1e1e1;
+.normal-text-size{
+    font-size: 2rem;
+}
+
+/* ----------------------------------------------------- */
+.choose-red{
+    padding: 2vw;
+}
+.team-red{
+    display: flex;
+    justify-content: space-between;
+}
+.team-red-reverse{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-right: 70px;
+}
+.pic-team{
+    display: flex;
+}
+.flag-group{
+    display: flex;
+    flex-direction: column;
+}
+.flag{
+    width: 2.5vw;
+}
+.card-group{
+    display: inline-flex;
     flex-wrap: wrap;
-    border-style: solid;
-    border-color: black;
+    gap: 50px;
 }
 
-.wind_pic{
-    display: block;
-    margin: auto;
+/* .card-element{
+    background-color: #797979;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+}
+.four-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.card{
+    background-color: #797979;
+}
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #797979;
+}
+.xo-table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 60px;
 }
 
-.fire {
-    height: 50vh;
-    width: 20vw;
-    background-color: #e1e1e1;
-    flex-wrap: wrap;
-    border-style: solid;
-    border-color: black;
+table{
+    border-collapse: collapse;
+    width: 30%;
 }
+table, td, tr {
+    border: 5px solid #5fcb73 ;
+    background-color: #96e967;
+  }
 
-.fire_pic{
-    display: block;
-    margin: auto;
+tr{
+    height: 7vw;
 }
-
-.earth {
-    height: 50vh;
-    width: 20vw;
-    background-color: #e1e1e1;
-    flex-wrap: wrap;
-    border-style: solid;
-    border-color: black;
-}
-
-.earth_pic{
-    display: block;
-    margin: auto;
-}
-
-.water {
-    height: 50vh;
-    width: 20vw;
-    background-color: #e1e1e1;
-    flex-wrap: wrap;
-    border-style: solid;
-    border-color: black;
-}
-
-.water_pic{
-    display: block;
-    margin: auto;
-}
-
-.element_name{
-    text-align: center;
-    background-color: #adadad;
-    height: 5vh;
-    border-bottom: solid;
-    border-color: black;
-}
-
-.next{
-    display: block;
-    margin: auto;
-    text-align: center;
-    height: 6vh;
-    width: 10vw;
-    margin-top: 8vh;
-    border-radius: 12px;
-    font-size: 3vh;
+.pic{
+    width: 70px;
 }

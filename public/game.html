@@ -1,24 +1,166 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tic Tac Toe Battle</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class=""></div>
-      
-    
+<head>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic Tac Toe Battle</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="choose-red">
+      <div class="team-red">
+        <div class="pic-team">
+          <img src="/public/img/Will.png" style="transform: scaleX(-1);">
+          <div class="flag-group">
+            <h2 class="normal-text-size">Blue Team</h2>
+            <div>
+              <img class="flag" src="/public/img/flag-131982518756050978.png">
+              <img class="flag" src="/public/img/flag-131982518756050978.png">
+              <img class="flag" src="/public/img/flag-131982518756050978.png">
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="card-group">
+          <div class="card">
+            <div class="card-element card-body">
+              <img class="neutral" src="/public/img/Icon_Neutral.png">
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-element card-body">
+              <img class="neutral" src="/public/img/Icon_Neutral.png">
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-element card-body">
+              <img class="neutral" src="/public/img/Icon_Neutral.png">
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-element card-body">
+              <img class="neutral" src="/public/img/Icon_Neutral.png">
+            </div>
+          </div>
+
+
+        </div>
+        <div class="four-element">
+          <button type="button" class="next">4 element</button>
+        </div>
+      </div>
+      <br>
+      <div class="xo-table">
+        <table>
+          <tr>
+            <td id="A0" class="table-block"></td>
+            <td id="A1" class="table-block"></td>
+            <td id="A2" class="table-block"></td>
+          </tr>
+          <tr>
+            <td id="B0" class="table-block"></td>
+            <td id="B1" class="table-block"></td>
+            <td id="B2" class="table-block"></td>
+          </tr>
+          <tr>
+            <td id="C0" class="table-block"></td>
+            <td id="C1" class="table-block"></td>
+            <td id="C2" class="table-block"></td>
+          </tr>
+        </table>
+      </div>
     </div>
-  </body>
+    <div class="team-red-reverse">
+      
+      <div class="card-group">
+        
+        <div class="card">
+          <div class="card-element card-body">
+            <img class="neutral" src="/public/img/Icon_Neutral.png">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-element card-body">
+            <img class="neutral" src="/public/img/Icon_Neutral.png">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-element card-body">
+            <img class="neutral" src="/public/img/Icon_Neutral.png">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-element card-body">
+            <img class="neutral" src="/public/img/Icon_Neutral.png">
+          </div>
+        </div>
+        <div class="pic-team">
+          <div class="flag-group">
+            <h2 class="normal-text-size">Your Team</h2>
+            <div>
+              <img class="flag" src="/public/img/flag-131982518756050978.png">
+                <img class="flag" src="/public/img/flag-131982518756050978.png">
+                <img class="flag" src="/public/img/flag-131982518756050978.png">
+            </div>
+          </div>
+          <img src="/public/img/Julia.png" style="transform: scaleX(-1);">
+        </div>
+      </div>
+      
+    </div>
+
+
+
+
+  </div>
+  <!-- <div class="card-group">
+          <button type="submit" class="card-element">
+              <h2 class="card-name">ธาตุลม</h2>
+              <img class="pic" src="img/Spectral_Eagle_journal.png">
+          </button>
+          <button type="submit" class="card-element">
+              <h2 class="card-name">ธาตุไฟ</h2>
+              <img class="pic" src="img/Spectral_Lion_journal.png">
+          </button>
+          <button type="submit" class="card-element">
+              <h2 class="card-name">ธาตุดิน</h2>
+              <img class="pic" src="img/Spectral_Toad_journal.png">
+          </button>
+          <button type="submit" class="card-element">
+              <h2 class="card-name">ธาตุน้ำ</h2>
+              <img class="pic" src="img/Spectral_Wolf_journal.png">
+          </button> -->
+
+
+
+  <!-- <img src="/public/img/Julia.png" style="transform: scaleX(-1);">
+              <h2 class="">Your Team</h2>
+              <div class="flag-group">
+                <img class="flag" src="/public/img/flag-131982518756050978.png">
+                <img class="flag" src="/public/img/flag-131982518756050978.png">
+                <img class="flag" src="/public/img/flag-131982518756050978.png">
+              </div> -->
+
+  </div>
+  <script type="text/javascript" src="auth.js"></script>
+  <script type="text/javascript" src="game.js"></script>
+</body>
+
 </html>
