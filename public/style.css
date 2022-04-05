@@ -17,6 +17,42 @@
 .char{
     width: 10vw;
     height: 30vh;
-    
 
 }
+
+.choose-red{
+    padding-top: 10vh;
+}
+
+.flag{
+    width: 2vw;
+    height: 3vh;
+}
+
+.neutral{
+    width: 30px;
+    height: 30px;
+}
+
+.gard-group{
+    display: flex;
+    flex-direction: row;
+}
+.gard-element{
+    width: 5vw;
+    height: 15vh;
+    border: 2px solid red;
+    background-color: #494949;
+}
+
+/*--table--*/
+.table-block{
+    width: 10vw;
+    height: 15vh;
+    color: black;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 50px;
+    border: solid 1px black;
+    text-align: center;
+  }
