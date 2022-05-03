@@ -25,7 +25,7 @@
       <img src="/public/img/PngItem_1963895.png" width="30" height="30" class="d-inline-block align-top" alt="">
       Tic Tac Toe Battle
     </a>
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">4 elements</button>
+    <button class="btn btn btn-success my-2 my-sm-0" type="submit">4 elements</button>
   </nav>
   <div class="container">
 
@@ -35,9 +35,9 @@
         <div class="card-group">
           <div class="pic-team">
             <img class="img-team" src="./img/Will.png" style="transform: scaleX(-1);">
-  
+
             <h2 class="normal-text-size">Blue Team</h2>
-  
+
           </div>
           <div class="card">
             <div class="card-element card-body">
@@ -60,9 +60,9 @@
             </div>
           </div>
         </div>
-        
+
         <!-- <button type="button" class="next"><p>4-ELM</p></button> -->
-        
+
       </div>
     </div>
 
@@ -84,11 +84,9 @@
           <td id="C2" class="table-block"></td>
         </tr>
       </table>
-      
+
     </div>
-    <div class="text-center">
-      <button class="btn btn-dark btn-xo" disabled>XO</button>
-    </div>
+
 
     <div class="team-red-reverse">
 
@@ -129,37 +127,84 @@
     </div>
   </div>
 
-  <div class="battle">
-    <div class="battle-box">
-
-      <div class="text-result fs-2"></div>
-      <div>
-        <div class="pic-team">
+  <div class="battle ">
+    <div class="battle-box container">
+      <div class="row justify-content-center mt-3">
+        <div class="col">
+          <h4 class="text-center fs-4">BATTLE</h4>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col">
+          <div class="text-result fs-4 text-center"></div>
+        </div>
+      </div>
+      <div class="row justify-content-center  mt-3">
+        <div class="col-3">
           <img class="imageBot" src="/public/img/Will.png" style="transform: scaleX(-1);" >
           <div class="flag-group">
             <h2 class="normal-text-size botTeam">Blue Team</h2>
           </div>
         </div>
-  
-        <div class="card-battle">
+        <div class="card-battle col-3">
           <img src=".\img\card-1.png" width="100%">
         </div>
-        <div class="card-battle">
+        <div class="card-battle col-3">
+          <img src=".\img\card-1.png" width="100%">
+        </div>
+        <div class="col-3 ">
+          <img class="imagePlayer" src="/public/img/Julia.png" style="transform: scaleX(-1); margin-left: 7vw; height: 124px;;">
+          <div class="flag-group">
+            <h2 class="normal-text-size username-name" style=" margin-left: 6vw;">GUEST</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-4 ">
+
+        </div>
+        <div class="col-4">
+          <button class="btn btn btn-success" type="button" onclick="closePopup()" style=" margin-left: 7.5vw;">OK</button>
+        </div>
+        <div class="col-4 ">
+          
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div>
+        <h4>BATTLE</h4>
+      </div>
+      <div class="text-result fs-2 row justify-content-center"></div>
+      <div class="row justify-content-center">
+        <div class="pic-team2 col-3">
+          <img class="imageBot" src="/public/img/Will.png" style="transform: scaleX(-1);" >
+          <div class="flag-group">
+            <h2 class="normal-text-size botTeam">Blue Team</h2>
+          </div>
+        </div>
+        <div class="card-battle col-3">
+          <img src=".\img\card-1.png" width="100%">
+        </div>
+
+        <div class="card-battle col-3">
           <img src=".\img\card-1.png" width="100%">
         </div>
   
-        <div class="pic-team">
+        <div class="pic-team2 col-3">
           <div class="flag-group">
             <h2 class="normal-text-size username-name">GUEST</h2>
           </div>
           <img class="imagePlayer" src="/public/img/Julia.png" style="transform: scaleX(-1);">
         </div>
       </div>
+      <div class="text-center row ">
+        <div>
+          <button class="btn btn-primary" type="button" onclick="closePopup()">OK</button>
+        </div>
+      </div> -->
 
-      <div class="text-center">
-        <button class="btn btn-primary" type="button" onclick="closePopup()">OK</button>
-      </div>
-    </div>
+  </div>
   </div>
 
 
@@ -168,14 +213,15 @@
 
       <div class="win-result fs-2"></div>
       <div class="text-center">
-        <button class="btn btn-primary" type="button" onclick="window.location.href = 'index.html'">กลับหน้าหลัก</button>
+        <button class="btn btn-primary" type="button"
+          onclick="window.location.href = 'index.html'">กลับหน้าหลัก</button>
       </div>
       <div class="text-center">
         <button class="btn btn-primary" type="button" onclick="window.location.href = 'game.html'">เล่นใหม่</button>
       </div>
     </div>
   </div>
-  
+
   <script type="text/javascript" src="app.js"></script>
   <script type="text/javascript" src="game.js"></script>
 </body>

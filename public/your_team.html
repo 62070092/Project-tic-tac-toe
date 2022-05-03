@@ -20,36 +20,41 @@
 </head>
 
 <body>
-    <h1 class="yourteam">ตัวละครธาตุ</h1>
+    <div class="container">
+        <h1 class="yourteam">ตัวละครธาตุ</h1>
+        <div class="input-group user-form show-name">
+            <span class="input-group-text" id="basic-addon1">ชื่อผู้เล่น</span>
+            <div class=" user-name text-center fs-1 mb-3" id="username-name">GUEST</div>
+            <div class="text-center fs-1 mb-3 user-name" id="username-team">---</div>
+        </div>
 
-    <div class="input-group user-form">
-        <span class="input-group-text" id="basic-addon1">ชื่อผู้เล่น</span>
-        <div class="text-center fs-1 mb-3" id="username-name">GUEST</div>
-        <div class="text-center fs-1 mb-3" id="username-team">---</div>
+
+        <br><br>
+        <div class=" all_element">
+            <div class="wind">
+                <img class="pic" src=".\img\card-1.png">
+            </div>
+
+            <div class="fire">
+                <img class="pic" src=".\img\card-4.png">
+            </div>
+
+            <div class="earth">
+                <img class="pic" src=".\img\card-3.png">
+            </div>
+
+            <div class="water">
+                <img class="pic" src=".\img\card-2.png">
+            </div>
+        </div>
+        <button type="button" class="next" onclick="location.href= 'rule.html'">ไปต่อ</button>
     </div>
 
-    <div class="container all_element">
-    <div class="wind">
-        <img class="pic" src=".\img\card-1.png">
-    </div>
-
-    <div class="fire">
-        <img class="pic" src=".\img\card-4.png">
-    </div>
-
-    <div class="earth">
-        <img class="pic" src=".\img\card-3.png">
-    </div>
-
-    <div class="water">
-        <img class="pic" src=".\img\card-2.png">
-    </div>
-    </div>
-    <button type="button" class="next" onclick="location.href= 'rule.html'">ไปต่อ</button>
 
 
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="auth.js"></script>
-    
+
 </body>
+
 </html>

@@ -15,12 +15,12 @@ html{
     justify-content: center;
     height: 100vh;
 }
-.container-page-select{
+/* .container-page-select{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 80vh;
-}
+} */
 
 .home{
     margin-top: 2vw;
@@ -54,6 +54,17 @@ html{
     width: 25vw;
 }
 
+.show-name{
+
+    border-radius: 10px;
+}
+.user-name{
+    padding-left: 1rem;
+}
+.user-form, .btn-start, .yourteam, .text-result{
+    font-family: 'Kanit', sans-serif;
+}
+
 .card{
     padding: 10px 20px;
     align-items: center;
@@ -67,13 +78,13 @@ html{
 }
 
 .char{
-    width: 10vw;
+
     height: 30vh;
     
 
 }
 .next{
-    padding: 0.5vw 2vw;
+
     border-radius: 30px;
     border: 3.5px solid #258f2e;
     background-color: #96e967;
@@ -116,7 +127,10 @@ html{
 .pic-team{
     display: flex;
 }
+.pic-team2{
+    display: flex;
 
+}
 
 .card-group{
     display: inline-flex;
@@ -168,9 +182,8 @@ tr{
 }
 
 .all_element{
-    margin-top: 8vh;
     display: flex;
-    column-gap: 5vw;
+    column-gap: 2vw;
     justify-content: center;  
 }
 
@@ -203,8 +216,7 @@ tr{
 }
 
 .pic{
-    width: 20vw;
-    height: 55vh;
+    width: 12vw;
 }
 
 .neutral{
@@ -226,18 +238,28 @@ tr{
 .battle-box, .win-box{
     width: 60vw;
     height: 50vh;
-    background-color: #96e967
+    background-color: #96e967;
+    border-radius: 20px;
    
 }
 .card-battle{
     width: 10vw;
-    height: 15vh;
-}
 
+}
+.battle{
+    align-items: center;
+    justify-content: center;
+}
 .battle-box > div{
     display: flex;
+    
 }
-
+.card-layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 @media (max-width: 768px) {
     table{
