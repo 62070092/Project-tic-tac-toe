@@ -25,49 +25,35 @@
       <h2 class="head-size">เลือกทีมของคุณ</h2>
     </div>
 
+    <div class="input-group user-form">
+      <span class="input-group-text" id="basic-addon1">ชื่อผู้เล่น</span>
+      <div class="text-center fs-1 mb-3" id="username-name">GUEST</div>
+    </div>
+    
+
     <div class="select-box container-page-select">
       <div class="card">
-        <img class="card-img-top char" src="/public/img/Julia.png" alt="Card image cap">
+        <img class="card-img-top char" src="./img/Julia.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">แดง</h5>
-          <button type="submit" class="red btn btn-primary" onclick="document.location='rule.html'">เลือก</button>
+          <button type="" class="red btn btn-primary" id="choose-red" onclick="chooseTeam('red')">เลือก</button>
         </div>
       </div>
 
       <div class="card">
-        <img class="card-img-top char" src="/public/img/Will.png" alt="Card image cap">
+        <img class="card-img-top char" src="./img/Will.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">น้ำเงิน</h5>
-          <button type="submit" class="blue btn btn-primary" onclick="document.location='rule.html'">เลือก</button>
+          <button type="" class="blue btn btn-primary" id="choose-blue" onclick="chooseTeam('blue')">เลือก</button>
         </div>
       </div>
     </div>
-
-
-    <!-- <div class="team">
-        <div class="card">
-          <img class="char" src="/public/img/Julia.png">
-        </div>
-        <button type="submit" class="red">เลือก</button>
-      </div>
-
-      <div class="team">
-        <div class="card">
-          <img class="char" src="/public/img/Will.png">
-        </div>
-        <button type="submit" class="blue">เลือก</button>
-      </div> -->
   </div>
 
   </div>
 
-
-
-
-
-
-  <script type="text/javascript" src="auth.js"></script>
-  <script type="text/javascript" src="game.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="choose.js"></script>
 
 </body>
 

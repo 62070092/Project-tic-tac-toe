@@ -25,14 +25,14 @@
     <div class="choose-red">
       <div class="team-red">
         <div class="pic-team">
-          <img src="/public/img/Will.png" style="transform: scaleX(-1);">
+          <img src="./img/Will.png" style="transform: scaleX(-1);">
           <div class="flag-group">
             <h2 class="normal-text-size">Blue Team</h2>
-            <div>
+            <!-- <div>
               <img class="flag" src="/public/img/flag-131982518756050978.png">
               <img class="flag" src="/public/img/flag-131982518756050978.png">
               <img class="flag" src="/public/img/flag-131982518756050978.png">
-            </div>
+            </div> -->
 
           </div>
         </div>
@@ -41,22 +41,22 @@
         <div class="card-group">
           <div class="card">
             <div class="card-element card-body">
-              <img class="neutral2" src="/public/img/Icon_Neutral.png">
+              <img class="neutral" src=".\img\card-back.png">
             </div>
           </div>
           <div class="card">
             <div class="card-element card-body">
-              <img class="neutral2" src="/public/img/Icon_Neutral.png">
+              <img class="neutral" src=".\img\card-back.png">
             </div>
           </div>
           <div class="card">
             <div class="card-element card-body">
-              <img class="neutral2" src="/public/img/Icon_Neutral.png">
+              <img class="neutral" src=".\img\card-back.png">
             </div>
           </div>
           <div class="card">
             <div class="card-element card-body">
-              <img class="neutral2" src="/public/img/Icon_Neutral.png">
+              <img class="neutral" src=".\img\card-back.png">
             </div>
           </div>
 
@@ -87,84 +87,57 @@
         </table>
       </div>
     </div>
+    
+    <div class="mt-5 text-center">
+      <button class="btn btn-dark btn-xo" disabled>XO</button>
+    </div>
+    
     <div class="team-red-reverse">
       
       <div class="card-group">
         
         <div class="card">
-          <img class="neutral card-img-top" src="/public/img/new pic/Untitled-1.png">
-          <div class=" card-body">
-            <a href="#" class="btn btn-primary">choose</a>
+          <div class="btn-card card-element card-body">
+            <img class="neutral" src=".\img\card-3.png">
           </div>
+          <button class="btn-card btn btn-success" onclick="chooseCard('dirt')">Earth</button>
         </div>
         <div class="card">
-          <img class="neutral card-img-top" src="/public/img/new pic/Untitled-2.png">
-          <div class=" card-body">
-            <a href="#" class="btn btn-primary">choose</a>
+          <div class="btn-card card-element card-body">
+            <img class="neutral" src=".\img\card-2.png">
           </div>
+          <button class="btn-card btn btn-primary" onclick="chooseCard('water')">Water</button>
         </div>
         <div class="card">
-          <img class="neutral card-img-top" src="/public/img/new pic/Untitled-3.png">
-          <div class=" card-body">
-            <a href="#" class="btn btn-primary">choose</a>
+          <div class="btn-card card-element card-body">
+            <img class="neutral" src=".\img\card-1.png">
           </div>
+          <button class="btn-card btn btn-warning" onclick="chooseCard('wind')">Wind</button>
         </div>
         <div class="card">
-          <img class="neutral card-img-top" src="/public/img/new pic/4.png">
-          <div class=" card-body">
-            <a href="#" class="btn btn-primary">choose</a>
+          <div class="btn-card card-element card-body">
+            <img class="neutral" src=".\img\card-4.png">
           </div>
+          <button class="btn-card btn btn-danger" onclick="chooseCard('fire')">Fire</button>
         </div>
         <div class="pic-team">
           <div class="flag-group">
-            <h2 class="normal-text-size">Your Team</h2>
-            <div>
+            <h2 class="normal-text-size" id="username-name">GUEST</h2>
+            <!-- <div>
               <img class="flag" src="/public/img/flag-131982518756050978.png">
                 <img class="flag" src="/public/img/flag-131982518756050978.png">
                 <img class="flag" src="/public/img/flag-131982518756050978.png">
-            </div>
+            </div> -->
           </div>
-          <img src="/public/img/Julia.png" style="transform: scaleX(-1);">
+          <img src="./img/Julia.png" style="transform: scaleX(-1);">
         </div>
       </div>
       
     </div>
-
-
-
-
   </div>
-  <!-- <div class="card-group">
-          <button type="submit" class="card-element">
-              <h2 class="card-name">ธาตุลม</h2>
-              <img class="pic" src="img/Spectral_Eagle_journal.png">
-          </button>
-          <button type="submit" class="card-element">
-              <h2 class="card-name">ธาตุไฟ</h2>
-              <img class="pic" src="img/Spectral_Lion_journal.png">
-          </button>
-          <button type="submit" class="card-element">
-              <h2 class="card-name">ธาตุดิน</h2>
-              <img class="pic" src="img/Spectral_Toad_journal.png">
-          </button>
-          <button type="submit" class="card-element">
-              <h2 class="card-name">ธาตุน้ำ</h2>
-              <img class="pic" src="img/Spectral_Wolf_journal.png">
-          </button> -->
 
-
-
-  <!-- <img src="/public/img/Julia.png" style="transform: scaleX(-1);">
-              <h2 class="">Your Team</h2>
-              <div class="flag-group">
-                <img class="flag" src="/public/img/flag-131982518756050978.png">
-                <img class="flag" src="/public/img/flag-131982518756050978.png">
-                <img class="flag" src="/public/img/flag-131982518756050978.png">
-              </div> -->
-
-  </div>
-  <script type="text/javascript" src="auth.js"></script>
   <script type="text/javascript" src="game.js"></script>
+  <script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>

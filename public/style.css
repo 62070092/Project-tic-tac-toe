@@ -47,7 +47,12 @@ html body{
     width: 25vw;
 }
 
-
+.card{
+    padding: 10px 20px;
+    align-items: center;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+}
 .team{
 
     border: 5px solid red;
@@ -131,26 +136,15 @@ html body{
     align-items: center;
 } */
 .card{
-    background-color: whitesmoke;
-    padding: 0.5vw 1vw;
-    align-items: center;
-    text-align: center;
-    font-family: 'Kanit', sans-serif;
+    background-color: #5fcb73;
+    border: none;
 }
-.card-body{
+/* .card-body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
-    padding: 0 1vw;
-}
-.neutral{
-    width: 6vw;
-}
-.neutral2{
-    width: 1.5vw;
-    margin: 1.5vw;
-}
+    background-color: #797979;
+} */
 .xo-table{
     display: flex;
     align-items: center;
@@ -170,6 +164,49 @@ table, td, tr {
 tr{
     height: 7vw;
 }
+
+
+.all_element{
+    margin-top: 8vh;
+    display: flex;
+    column-gap: 5vw;
+    justify-content: center;  
+}
+
+.yourteam {
+    margin-top: 5vh;
+    text-align: center;
+}
+
+
+.next{
+    display: block;
+    margin: auto;
+    text-align: center;
+    height: 6vh;
+    width: 10vw;
+    margin-top: 8vh;
+    border-radius: 12px;
+    font-size: 3vh;
+}
+
+.gard-name{
+    display: flex;
+    text-align: center;
+    background-color: #adadad;
+    height: 3vh;
+    border-bottom: solid;
+    border-color: black;
+    font-size: 10pt;
+    justify-content: center;
+}
+
 .pic{
-    width: 70px;
+    width: 20vw;
+    height: 55vh;
+}
+
+.neutral{
+    width: 8vw;
+    height: 15vh;
 }
