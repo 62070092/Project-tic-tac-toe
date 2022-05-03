@@ -61,8 +61,11 @@ html{
 .user-name{
     padding-left: 1rem;
 }
-.user-form, .btn-start, .yourteam, .text-result{
+.user-form, .btn-start, .yourteam, .text-result, .botTeam, .win-result , .btn{
     font-family: 'Kanit', sans-serif;
+}
+.win-result{
+    font-size: 8vw;
 }
 
 .card{
@@ -162,6 +165,9 @@ html{
     align-items: center;
     justify-content: center;
     
+}
+.table-block{
+    text-align: center;
 }
 
 table{
