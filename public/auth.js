@@ -3,6 +3,7 @@ document.querySelector("#btn-enter").addEventListener('click', loginAnonymous)
 
 function loginAnonymous(){
     const name = document.querySelector("#input-login-username").value
+    console.log(name)
     firebase.auth().signInAnonymously()
       .then((userCredential) => {
         // Signed in..
@@ -12,7 +13,7 @@ function loginAnonymous(){
             name: name
         })
         setTimeout(() => {
-            window.location.href = "Choose your team.html"
+            window.location.href = "Choose_team.html"
         }, 1000)
     })
       .catch((error) => {
