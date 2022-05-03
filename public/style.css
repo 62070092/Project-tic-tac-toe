@@ -2,6 +2,13 @@
 html body{
     background-color: #5fcb73;
 }
+html{
+    height: 100vh;
+}
+.navbar-brand{
+    margin:0 2rem;
+}
+
 .container-page-rule{
     display: flex;
     align-items: center;
@@ -90,37 +97,31 @@ html body{
 }
 
 .normal-text-size{
-    font-size: 2rem;
+    font-size: 2vw;
 }
 
 /* ----------------------------------------------------- */
 .choose-red{
-    padding: 2vw;
+    padding: 1rem 0 0 2rem;
 }
 .team-red{
     display: flex;
-    justify-content: space-between;
 }
 .team-red-reverse{
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
-    padding-right: 70px;
+    padding-right: 2rem;
 }
 .pic-team{
     display: flex;
 }
-.flag-group{
-    display: flex;
-    flex-direction: column;
-}
-.flag{
-    width: 2.5vw;
-}
+
+
 .card-group{
     display: inline-flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 2vw;
 }
 
 /* .card-element{
@@ -129,15 +130,12 @@ html body{
     align-items: center;
     justify-content: center;
     width: 10%;
-}
-.four-element{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 } */
+
 .card{
     background-color: #5fcb73;
     border: none;
+    height: 100%;
 }
 /* .card-body{
     display: flex;
@@ -149,12 +147,12 @@ html body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 60px;
+    
 }
 
 table{
     border-collapse: collapse;
-    width: 30%;
+    width: 20%;
 }
 table, td, tr {
     border: 5px solid #5fcb73 ;
@@ -162,9 +160,12 @@ table, td, tr {
   }
 
 tr{
-    height: 7vw;
+    height: 5vw;
 }
 
+.img-team{
+    height: 8vw;
+}
 
 .all_element{
     margin-top: 8vh;
@@ -207,6 +208,21 @@ tr{
 }
 
 .neutral{
-    width: 8vw;
-    height: 15vh;
+    width: 6vw;
+}
+
+@media (max-width: 768px) {
+    table{
+        border-collapse: collapse;
+        width: 30%;
+    }
+    tr{
+        height: 8vw;
+    }
+    .neutral{
+        width: 8vw;
+    }
+    .img-team{
+        height: 15vw;
+    }
 }
