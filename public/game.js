@@ -174,7 +174,6 @@ function CheckWinner(){
     else {
         player = 'O'
     }
-
     const win1 = btnXOs[0].innerHTML == player && btnXOs[1].innerHTML == player && btnXOs[2].innerHTML == player
     const win2 = btnXOs[3].innerHTML == player && btnXOs[4].innerHTML == player && btnXOs[5].innerHTML == player
     const win3 = btnXOs[6].innerHTML == player && btnXOs[7].innerHTML == player && btnXOs[8].innerHTML == player
