@@ -47,12 +47,7 @@ html body{
     width: 25vw;
 }
 
-.card{
-    padding: 10px 20px;
-    align-items: center;
-    text-align: center;
-    font-family: 'Kanit', sans-serif;
-}
+
 .team{
 
     border: 5px solid red;
@@ -135,16 +130,27 @@ html body{
     justify-content: center;
     align-items: center;
 } */
-.card{
-    background-color: #5fcb73;
-    border: none;
-}
-/* .card-body{
+/* .card{
+    background-color: whitesmoke;
+    padding: 0.5vw 1vw;
+    align-items: center;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+} */
+/* /* .card-body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #797979;
+    background-color: whitesmoke;
+    padding: 0 1vw;
 } */
+.neutral{
+    width: 6vw;
+}
+.neutral2{
+    width: 1.5vw;
+    margin: 1.5vw;
+}
 .xo-table{
     display: flex;
     align-items: center;
