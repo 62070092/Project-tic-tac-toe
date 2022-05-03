@@ -210,3 +210,30 @@ tr{
     width: 8vw;
     height: 15vh;
 }
+
+.battle, .win{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.battle-box, .win-box{
+    width: 60vw;
+    height: 50vh;
+    background-color: #96e967
+   
+}
+.card-battle{
+    width: 10vw;
+    height: 15vh;
+}
+
+.battle-box > div{
+    display: flex;
+}
+

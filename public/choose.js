@@ -11,6 +11,6 @@ function chooseTeam(team){
         team: team
     })
     setTimeout(() => {
-        window.location.href = "rule.html"
+        window.location.href = "your_team.html"
     }, 1000)
 }

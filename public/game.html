@@ -25,15 +25,9 @@
     <div class="choose-red">
       <div class="team-red">
         <div class="pic-team">
-          <img src="/public/img/Will.png" style="transform: scaleX(-1);">
+          <img class="imageBot" src="/public/img/Will.png" style="transform: scaleX(-1);" >
           <div class="flag-group">
-            <h2 class="normal-text-size">Blue Team</h2>
-            <!-- <div>
-              <img class="flag" src="/public/img/flag-131982518756050978.png">
-              <img class="flag" src="/public/img/flag-131982518756050978.png">
-              <img class="flag" src="/public/img/flag-131982518756050978.png">
-            </div> -->
-
+            <h2 class="normal-text-size botTeam">Blue Team</h2>
           </div>
         </div>
 
@@ -59,14 +53,15 @@
               <img class="neutral" src=".\img\card-back.png">
             </div>
           </div>
-
-
         </div>
+
         <div class="four-element">
           <button type="button" class="next">4 element</button>
         </div>
       </div>
+
       <br>
+
       <div class="xo-table">
         <table>
           <tr>
@@ -87,15 +82,9 @@
         </table>
       </div>
     </div>
-    
-    <div class="mt-5 text-center">
-      <button class="btn btn-dark btn-xo" disabled>XO</button>
-    </div>
-    
+
     <div class="team-red-reverse">
-      
       <div class="card-group">
-        
         <div class="card">
           <div class="btn-card card-element card-body">
             <img class="neutral" src=".\img\card-3.png">
@@ -122,22 +111,63 @@
         </div>
         <div class="pic-team">
           <div class="flag-group">
-            <h2 class="normal-text-size" id="username-name">GUEST</h2>
-            <!-- <div>
-              <img class="flag" src="/public/img/flag-131982518756050978.png">
-                <img class="flag" src="/public/img/flag-131982518756050978.png">
-                <img class="flag" src="/public/img/flag-131982518756050978.png">
-            </div> -->
+            <h2 class="normal-text-size username-name">GUEST</h2>
           </div>
-          <img src="/public/img/Julia.png" style="transform: scaleX(-1);">
+          <img class="imagePlayer" src="/public/img/Julia.png" style="transform: scaleX(-1);">
         </div>
       </div>
-      
     </div>
   </div>
 
-  <script type="text/javascript" src="game.js"></script>
+  <div class="battle">
+    <div class="battle-box">
+
+      <div class="text-result fs-2"></div>
+      <div>
+        <div class="pic-team">
+          <img class="imageBot" src="/public/img/Will.png" style="transform: scaleX(-1);" >
+          <div class="flag-group">
+            <h2 class="normal-text-size botTeam">Blue Team</h2>
+          </div>
+        </div>
+  
+        <div class="card-battle">
+          <img src=".\img\card-1.png" width="100%">
+        </div>
+        <div class="card-battle">
+          <img src=".\img\card-1.png" width="100%">
+        </div>
+  
+        <div class="pic-team">
+          <div class="flag-group">
+            <h2 class="normal-text-size username-name">GUEST</h2>
+          </div>
+          <img class="imagePlayer" src="/public/img/Julia.png" style="transform: scaleX(-1);">
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="btn btn-primary" type="button" onclick="closePopup()">OK</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="win">
+    <div class="win-box">
+
+      <div class="win-result fs-2"></div>
+      <div class="text-center">
+        <button class="btn btn-primary" type="button" onclick="window.location.href = 'index.html'">กลับหน้าหลัก</button>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary" type="button" onclick="window.location.href = 'game.html'">เล่นใหม่</button>
+      </div>
+    </div>
+  </div>
+  
   <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="game.js"></script>
 </body>
 
 </html>
