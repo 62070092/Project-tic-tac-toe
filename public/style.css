@@ -177,69 +177,6 @@ tr{
     text-align: center;
 }
 
-.wind {
-    height: 50vh;
-    width: 20vw;
-    background-color: #e1e1e1;
-    flex-wrap: wrap;
-    border-style: solid;
-    border-color: black;
-}
-
-.wind_pic{
-    display: block;
-    margin: auto;
-}
-
-.fire {
-    height: 50vh;
-    width: 20vw;
-    background-color: #e1e1e1;
-    flex-wrap: wrap;
-    border-style: solid;
-    border-color: black;
-}
-
-.fire_pic{
-    display: block;
-    margin: auto;
-}
-
-.earth {
-    height: 50vh;
-    width: 20vw;
-    background-color: #e1e1e1;
-    flex-wrap: wrap;
-    border-style: solid;
-    border-color: black;
-}
-
-.earth_pic{
-    display: block;
-    margin: auto;
-}
-
-.water {
-    height: 50vh;
-    width: 20vw;
-    background-color: #e1e1e1;
-    flex-wrap: wrap;
-    border-style: solid;
-    border-color: black;
-}
-
-.water_pic{
-    display: block;
-    margin: auto;
-}
-
-.element_name{
-    text-align: center;
-    background-color: #adadad;
-    height: 5vh;
-    border-bottom: solid;
-    border-color: black;
-}
 
 .next{
     display: block;
@@ -261,4 +198,14 @@ tr{
     border-color: black;
     font-size: 10pt;
     justify-content: center;
+}
+
+.pic{
+    width: 20vw;
+    height: 55vh;
+}
+
+.neutral{
+    width: 8vw;
+    height: 15vh;
 }

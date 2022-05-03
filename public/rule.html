@@ -21,24 +21,29 @@
 
 <body>
   <div class="container container-page-rule">
+
+    <div class="input-group user-form">
+      <span class="input-group-text" id="basic-addon1">ชื่อผู้เล่น</span>
+      <div class="text-center fs-1 mb-3" id="username-name">GUEST</div>
+      <div class="text-center fs-1 mb-3" id="username-team">---</div>
+    </div>
+
     <div class="page-rule">
       <h2 class="head-size">กติกาการเล่น</h2>
       <div class="box-rule">
-        <h3>1. ผู้เล่นต้องเลือกธาตุที่จะใช้ต่อสู้ภายในเวลา 10 วินาที หากเวลาหมดระบบจะเลือกธาตุให้อัตโนมัติ <br>
-          2. ระบบจะไม่เปิดเผยธาตุของฝ่ายตรงข้ามจนกว่าผู้เล่นจะเลือกธาตุเสร็จ<br>
-          3. หากผู้เล่นชนะในรอบนั้นๆ ผู้เล่นจะมีสิทธิ์เลือกที่จะวางธง หรือทำลายธงของฝ่ายตรงข้าม โดยการทำลายธงสามารถทำได้ 3
-          ในหนึ่งแมทซ์เท่านั้น<br>
-          4. หากมีผู้เล่นฝ่ายใดฝ่ายหนึ่งชนะ(ธงเรียงต่อกัน แนวนอน, แนวตั้ง, หรือแนวทแยง) เกมจะจบทันที <br>
-          5. กรณีที่ไม่พบว่าฝ่ายใดชนะ จะทำการนับจำนวนธงผู้เล่นที่มีจำนวนมากที่สุด ฝ่ายที่มีธงมากกว่าจะเป็นผู้ชนะ</h3>
+        <h3>1. ผู้เล่นต้องเลือกธาตุที่จะใช้โดยที่ผู้เล่นไม่สามารถรู้ได้ว่าอีกฝ่ายเลือกธาตุอะไร<br>
+          2. ระบบจะไม่เปิดเผยธาตุของฝ่ายตรงข้ามจนกว่าผู้เล่นจะเลือกธาตุ<br>
+          3. หากผู้เล่นชนะในรอบนั้นๆ ผู้เล่นจะมีสิทธิ์เลือกที่จะวาง X หรือ O<br>
+          4. หากมีผู้เล่นฝ่ายใดฝ่ายหนึ่งชนะ(XO เรียงต่อกันแนวนอน, แนวตั้ง, หรือแนวทแยง) เกมจะจบทันที <br>
       </div>
       <br>
-      <button type="submit" class="btn-start" onclick="document.location='your_team.html'">เริ่ม</button>
+      <button type="" class="btn-start" id="btn-go">เริ่ม</button>
     </div>
-    
-
-
-
   </div>
+
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="howtoplay.js"></script>
+
 </body>
 
 </html>
