@@ -20,19 +20,25 @@
 </head>
 
 <body>
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand" href="#">
+      <img src="/public/img/PngItem_1963895.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Tic Tac Toe Battle
+    </a>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">4 elements</button>
+  </nav>
   <div class="container">
 
     <div class="choose-red">
       <div class="team-red">
-        <div class="pic-team">
-          <img class="imageBot" src="/public/img/Will.png" style="transform: scaleX(-1);" >
-          <div class="flag-group">
-            <h2 class="normal-text-size botTeam">Blue Team</h2>
-          </div>
-        </div>
-
 
         <div class="card-group">
+          <div class="pic-team">
+            <img class="img-team" src="./img/Will.png" style="transform: scaleX(-1);">
+  
+            <h2 class="normal-text-size">Blue Team</h2>
+  
+          </div>
           <div class="card">
             <div class="card-element card-body">
               <img class="neutral" src=".\img\card-back.png">
@@ -54,68 +60,72 @@
             </div>
           </div>
         </div>
-
-        <div class="four-element">
-          <button type="button" class="next">4 element</button>
-        </div>
-      </div>
-
-      <br>
-
-      <div class="xo-table">
-        <table>
-          <tr>
-            <td id="A0" class="table-block"></td>
-            <td id="A1" class="table-block"></td>
-            <td id="A2" class="table-block"></td>
-          </tr>
-          <tr>
-            <td id="B0" class="table-block"></td>
-            <td id="B1" class="table-block"></td>
-            <td id="B2" class="table-block"></td>
-          </tr>
-          <tr>
-            <td id="C0" class="table-block"></td>
-            <td id="C1" class="table-block"></td>
-            <td id="C2" class="table-block"></td>
-          </tr>
-        </table>
+        
+        <!-- <button type="button" class="next"><p>4-ELM</p></button> -->
+        
       </div>
     </div>
 
+    <div class="xo-table">
+      <table>
+        <tr>
+          <td id="A0" class="table-block"></td>
+          <td id="A1" class="table-block"></td>
+          <td id="A2" class="table-block"></td>
+        </tr>
+        <tr>
+          <td id="B0" class="table-block"></td>
+          <td id="B1" class="table-block"></td>
+          <td id="B2" class="table-block"></td>
+        </tr>
+        <tr>
+          <td id="C0" class="table-block"></td>
+          <td id="C1" class="table-block"></td>
+          <td id="C2" class="table-block"></td>
+        </tr>
+      </table>
+      
+    </div>
+    <div class="text-center">
+      <button class="btn btn-dark btn-xo" disabled>XO</button>
+    </div>
+
     <div class="team-red-reverse">
+
       <div class="card-group">
+
         <div class="card">
-          <div class="btn-card card-element card-body">
+          <div class="btn-card card-body">
             <img class="neutral" src=".\img\card-3.png">
           </div>
           <button class="btn-card btn btn-success" onclick="chooseCard('dirt')">Earth</button>
         </div>
         <div class="card">
-          <div class="btn-card card-element card-body">
+          <div class="btn-card card-body">
             <img class="neutral" src=".\img\card-2.png">
           </div>
           <button class="btn-card btn btn-primary" onclick="chooseCard('water')">Water</button>
         </div>
         <div class="card">
-          <div class="btn-card card-element card-body">
+          <div class="btn-card card-body">
             <img class="neutral" src=".\img\card-1.png">
           </div>
           <button class="btn-card btn btn-warning" onclick="chooseCard('wind')">Wind</button>
         </div>
         <div class="card">
-          <div class="btn-card card-element card-body">
+          <div class="btn-card card-body">
             <img class="neutral" src=".\img\card-4.png">
           </div>
           <button class="btn-card btn btn-danger" onclick="chooseCard('fire')">Fire</button>
         </div>
         <div class="pic-team">
-          <div class="flag-group">
-            <h2 class="normal-text-size username-name">GUEST</h2>
-          </div>
-          <img class="imagePlayer" src="/public/img/Julia.png" style="transform: scaleX(-1);">
+
+          <h2 class="normal-text-size" id="username-name">Red Team</h2>
+
+          <img class="img-team" src="./img/Julia.png" style="transform: scaleX(-1);">
         </div>
       </div>
+
     </div>
   </div>
 
