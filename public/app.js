@@ -21,6 +21,10 @@ refUsers.on("value", (data) => {
     const name = document.querySelector("#username-name");
     const team = document.querySelector("#username-team");
 
-    document.querySelector("#username-name").innerHTML = data[currentUser.uid].name
-    document.querySelector("#username-team").innerHTML = data[currentUser.uid].team
+    if (name) {
+      document.querySelector("#username-name").innerHTML = data[currentUser.uid].name
+    }
+    if (team){
+      document.querySelector("#username-team").innerHTML = data[currentUser.uid].team
+    }
 })

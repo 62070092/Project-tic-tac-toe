@@ -20,35 +20,65 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="home">
-      <h2 class="head-size">เลือกทีมของคุณ</h2>
-    </div>
+  <div class="container index-box">
+    <div>
 
-    <div class="input-group user-form show-name">
-      <span class="input-group-text" id="basic-addon1">ชื่อผู้เล่น</span>
-      <div class="text-center fs-4 user-name" id="username-name">GUEST</div>
-    </div>
-    <br>
-
-    <div class="select-box ">
-      <div class="card">
-        <img class="card-img-top char" src="/public/img/Julia.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">แดง</h5>
-          <button type="" class="red btn btn-danger" id="choose-red" onclick="chooseTeam('ทีมแดง')">เลือก</button>
+      <div class="home">
+        <h2 class="head-size">เลือกทีมของคุณ</h2>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <div class="user-form show-name d-flex align-items-center justify-content-center">
+          <span>ชื่อผู้เล่น</span>
+          <div class="text-center fs-1 user-name" id="username-name">GUEST</div>
+        </div>
+        <div class="score-show mt-2">
+          <div id="score-win">Win : <span class="fs-3">0</span></div>
+          <div id="score-draw">Draw : <span class="fs-3">0</span></div>
+          <div id="score-lose">Lose : <span class="fs-3">0</span></div>
         </div>
       </div>
-
-      <div class="card">
-        <img class="card-img-top char" src="/public/img/Will.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">น้ำเงิน</h5>
-          <button type="" class="blue btn btn-primary" id="choose-blue" onclick="chooseTeam('ทีมน้ำเงิน')">เลือก</button>
+      <br>
+      <div id="btn-logout">
+        <button class="btn btn-secondary">Log out</button>
+      </div>
+      <div id="btn-score">
+        <button class="btn btn-success" onclick="toggleScore('open')">Scoreboard</button>
+      </div>
+      <div class="select-box mt-4">
+        <div class="card">
+          <img class="card-img-top char" src="/public/img/Julia.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">แดง</h5>
+            <button type="" class="red btn btn-danger" id="choose-red" onclick="chooseTeam('ทีมแดง')">เลือก</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img class="card-img-top char" src="/public/img/Will.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">น้ำเงิน</h5>
+            <button type="" class="blue btn btn-primary" id="choose-blue" onclick="chooseTeam('ทีมน้ำเงิน')">เลือก</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    </div>
+
+    <div id="score-popup">
+      <div>
+        <div id="btn-close" onclick="toggleScore('close')">X</div>
+        <h1 class="text-center">Score board</h1>
+        <div id="score-head">
+          <div class="score-name">Name</div>
+          <div>Win</div>
+          <div>Draw</div>
+          <div>Lose</div>
+        </div>
+        <div id="score-body">
+
+        </div>
+      </div>
+    </div>
 
   </div>
 

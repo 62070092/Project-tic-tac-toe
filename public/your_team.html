@@ -20,40 +20,70 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="yourteam">ตัวละครธาตุ</h1>
-        <div class="input-group user-form show-name">
-            <span class="input-group-text" id="basic-addon1">ชื่อผู้เล่น</span>
-            <div class=" user-name text-center fs-3" id="username-name">GUEST</div>
-            <div class="text-center fs-3 user-name" id="username-team">---</div>
+    <div class="container index-box">
+        <div>
+            
+            <h1 class="yourteam">ตัวละครธาตุ</h1>
+            <div class="d-flex flex-column align-items-center">
+                <div class="user-form show-name d-flex align-items-center justify-content-center">
+                  <span>ชื่อผู้เล่น</span>
+                  <div class="text-center fs-1 user-name" id="username-name">GUEST</div>
+                </div>
+                <div class="text-center fs-3 user-name" id="username-team"></div>
+                <div class="score-show mt-2">
+                  <div id="score-win">Win : <span class="fs-3">0</span></div>
+                  <div id="score-draw">Draw : <span class="fs-3">0</span></div>
+                  <div id="score-lose">Lose : <span class="fs-3">0</span></div>
+                </div>
+              </div>
+              <br>
+              <div id="btn-logout">
+                <button class="btn btn-secondary">Log out</button>
+              </div>
+              <div id="btn-score">
+                <button class="btn btn-success" onclick="toggleScore('open')">Scoreboard</button>
+              </div>
+    
+            <br><br>
+            <div class=" all_element">
+                <div class="wind">
+                    <img class="pic" src=".\img\card-1.png">
+                </div>
+    
+                <div class="fire">
+                    <img class="pic" src=".\img\card-4.png">
+                </div>
+    
+                <div class="earth">
+                    <img class="pic" src=".\img\card-3.png">
+                </div>
+    
+                <div class="water">
+                    <img class="pic" src=".\img\card-2.png">
+                </div>
+            </div>
+            <button type="button" class="next" onclick="location.href= 'rule.html'">ไปต่อ</button>
         </div>
-
-
-        <br><br>
-        <div class=" all_element">
-            <div class="wind">
-                <img class="pic" src=".\img\card-1.png">
-            </div>
-
-            <div class="fire">
-                <img class="pic" src=".\img\card-4.png">
-            </div>
-
-            <div class="earth">
-                <img class="pic" src=".\img\card-3.png">
-            </div>
-
-            <div class="water">
-                <img class="pic" src=".\img\card-2.png">
-            </div>
-        </div>
-        <button type="button" class="next" onclick="location.href= 'rule.html'">ไปต่อ</button>
     </div>
-
+    <div id="score-popup">
+        <div>
+          <div id="btn-close" onclick="toggleScore('close')">X</div>
+          <h1 class="text-center">Score board</h1>
+          <div id="score-head">
+            <div class="score-name">Name</div>
+            <div>Win</div>
+            <div>Draw</div>
+            <div>Lose</div>
+          </div>
+          <div id="score-body">
+  
+          </div>
+        </div>
+      </div>
 
 
     <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="auth.js"></script>
+    <script type="text/javascript" src="choose.js"></script>
 
 </body>
 

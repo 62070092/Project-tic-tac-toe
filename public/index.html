@@ -20,23 +20,78 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="home">
-      <h1>Tic Tac Toe Battle</h1>
-      <div class="logo">
-        <img src="img\PngItem_1963895.png">
+  <div class="container index-box">
+    <div>
+      <div class="home text-center">
+        <h1>Tic Tac Toe Battle</h1>
+        <div class="logo">
+          <img src="img\PngItem_1963895.png">
+        </div>
+        <div>
+          
+        </div>
+        <br>
+        <!-- <div class="input-group user-form">
+          <span class="input-group-text" id="basic-addon1">ชื่อผู้เล่น</span>
+          <input type="text" class="form-control" placeholder="ใส่ชื่อของคุณ" aria-label="Username" aria-describedby="basic-addon1" id="input-login-username">
+        </div>
+        <br>
+        <button type="" class="btn-start" id="btn-enter">ไปกันเลย!</button> -->
+        <div class="text-center logged-out mb-2 mt-4" id="login-input">
+          <!-- <div class="fs-2 mb-2">Login</div> -->
+          <form id="login-form" action="" class="">
+            <div>
+              <div class="d-flex justify-content-end align-items-center mb-2 w-100">
+                <div class="me-2 text-end">Email: </div>
+                <div class="input-formm">
+                  <input id="input-email-login" type="email" class="form-control" placeholder="Email" aria-label="title" aria-describedby="basic-addon1" required/>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end align-items-center mb-2 w-100">
+                <div class="me-2 text-end">Password: </div>
+                <div class="input-formm">
+                  <input id="input-password-login" type="password" class="form-control" placeholder="Password" aria-label="title" aria-describedby="basic-addon1" required/>
+                </div>
+              </div>
+            </div>
+            <div id="feedback-msg-login"></div>
+            <div class="text-end">
+              <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-signup">Register</button>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+          </form>
       </div>
-      <div>
-        
-      </div>
-      <br>
-      <div class="input-group user-form">
-        <span class="input-group-text" id="basic-addon1">ชื่อผู้เล่น</span>
-        <input type="text" class="form-control" placeholder="ใส่ชื่อของคุณ" aria-label="Username" aria-describedby="basic-addon1" id="input-login-username">
-      </div>
-      <br>
-      <button type="" class="btn-start" id="btn-enter">ไปกันเลย!</button>
+    </div>
+  </div>
 
+  <div class="modal" id="modal-signup" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Signup</h5>
+          <button type="button" class="btn-close btn-cancel" data-bs-dismiss="modal" aria-lable="Close"></button>
+        </div>
+          <div class="modal-body">
+            <form id="signup-form">
+            <div>Name:</div>
+            <input id="input-name-signup" type="name" class="form-control mb-3" required />
+            <!-- <br> -->
+            <div>Email:</div>
+            <input id="input-email-signup" type="email" class="form-control mb-3"  aria-label="title" aria-describedby="basic-addon1" required/>
+            <!-- <br/> -->
+            <div>Password:</div>
+            <input id="input-password-signup" type="password" class="form-control mb-3"  aria-label="title" aria-describedby="basic-addon1" required/>
+            <br>
+            <p id="feedback-msg-signup"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-cancel" data-bs-dismiss="modal">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">Signup</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 

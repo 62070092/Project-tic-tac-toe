@@ -3,56 +3,64 @@ const btnCards = document.querySelectorAll(".btn-card");
 const btnXOs = document.querySelectorAll(".table-block");
 let WhoWin = "";
 
-firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      var uid = user.uid;
-      setUpGame(uid);
-      // ...
-    } else {
-      // User is signed out
-      // ...
-    }
-  });
+// firebase.auth().onAuthStateChanged((user) => {
+//     if (user) {
+//       var uid = user.uid;
+//       setUpGame(uid);
+//       // ...
+//     } else {
+//       // User is signed out
+//       // ...
+//     }
+//   });
+refUsers.on("value", (data) => {
+    data = data.val()
+    console.log(data);
+    const currentUser = firebase.auth().currentUser
+    setUpGame(data[currentUser.uid])
+})
 
-function setUpGame(uid){
+function setUpGame(data){
     const imgePlayer = document.querySelectorAll('.imagePlayer');
     const imgeBot = document.querySelectorAll('.imageBot');
     const BotName = document.querySelectorAll('.botTeam');
     const playername = document.querySelectorAll('.username-name');
+    const scoreWin = document.querySelector("#score-win span")
+    const scoreDraw = document.querySelector("#score-draw span")
+    const scoreLose = document.querySelector("#score-lose span")
+    
+    console.log(BotName)
+    playername[0].innerHTML = data.name;
+    playername[1].innerHTML = data.name;
+    scoreWin.innerHTML = data.win
+    scoreDraw.innerHTML = data.draw
+    scoreLose.innerHTML = data.lose
 
-    refUsers.child(uid).once("value", (data) => {
-        data = data.val()
-        console.log(BotName)
-        playername[0].innerHTML = data.name;
-        playername[1].innerHTML = data.name;
+    if (data.team == "ทีมแดง"){
+        imgeBot[0].src = "./img/Will.png"
+        imgeBot[1].src = "./img/Will.png"
+        imgeBot[0].style.transform = "scaleX(-1)"
+        imgeBot[1].style.transform = "scaleX(-1)"
+        imgePlayer[0].src = "./img/Julia.png"
+        imgePlayer[0].style.transform = "scaleX(-1)"
+        imgePlayer[1].src = "./img/Julia.png"
+        imgePlayer[1].style.transform = "scaleX(-1)"
+        BotName[0].innerHTML = 'ทีมน้ำเงิน'
+        BotName[1].innerHTML = 'ทีมน้ำเงิน'
+    }
+    else {
+        imgeBot[0].src = "./img/Julia.png"
+        imgeBot[0].style.transform = "scaleX(1)"
+        imgePlayer[0].src = "./img/Will.png"
+        imgePlayer[0].style.transform = "scaleX(1)"
+        BotName[0].innerHTML = 'ทีมแดง'
 
-
-        if (data.team == "ทีมแดง"){
-            imgeBot[0].src = "./img/Will.png"
-            imgeBot[1].src = "./img/Will.png"
-            imgeBot[0].style.transform = "scaleX(-1)"
-            imgeBot[1].style.transform = "scaleX(-1)"
-            imgePlayer[0].src = "./img/Julia.png"
-            imgePlayer[0].style.transform = "scaleX(-1)"
-            imgePlayer[1].src = "./img/Julia.png"
-            imgePlayer[1].style.transform = "scaleX(-1)"
-            BotName[0].innerHTML = 'ทีมน้ำเงิน'
-            BotName[1].innerHTML = 'ทีมน้ำเงิน'
-        }
-        else {
-            imgeBot[0].src = "./img/Julia.png"
-            imgeBot[0].style.transform = "scaleX(1)"
-            imgePlayer[0].src = "./img/Will.png"
-            imgePlayer[0].style.transform = "scaleX(1)"
-            BotName[0].innerHTML = 'ทีมแดง'
-
-            imgeBot[1].src = "./img/Julia.png"
-            imgeBot[1].style.transform = "scaleX(1)"
-            imgePlayer[1].src = "./img/Will.png"
-            imgePlayer[1].style.transform = "scaleX(1)"
-            BotName[1].innerHTML = 'ทีมแดง'
-        }
-    })
+        imgeBot[1].src = "./img/Julia.png"
+        imgeBot[1].style.transform = "scaleX(1)"
+        imgePlayer[1].src = "./img/Will.png"
+        imgePlayer[1].style.transform = "scaleX(1)"
+        BotName[1].innerHTML = 'ทีมแดง'
+    }
 }
 
 function chooseCard(element){
@@ -209,14 +217,27 @@ function closePopup(){
 function winPopup(who){
     console.log(who);
     document.querySelector('.win').style.display = 'flex';
-    if(who == "player"){
-        document.querySelector('.win-result').innerHTML = "คุณชนะ"
-    }
-    else if(who == "draw"){
-        document.querySelector('.win-result').innerHTML = "เสมอ"
-    }
-    else{
-        document.querySelector('.win-result').innerHTML = "คุณแพ้"
-    }
+    const currentUser = firebase.auth().currentUser
+    refUsers.child(currentUser.uid).once("value", (data) => {
+        data = data.val()
+        if(who == "player"){
+            document.querySelector('.win-result').innerHTML = "คุณชนะ"
+            refUsers.child(currentUser.uid).update({
+                win: data.win + 1
+            })
+        }
+        else if(who == "draw"){
+            document.querySelector('.win-result').innerHTML = "เสมอ"
+            refUsers.child(currentUser.uid).update({
+                draw: data.draw + 1
+            })
+        }
+        else{
+            document.querySelector('.win-result').innerHTML = "คุณแพ้"
+            refUsers.child(currentUser.uid).update({
+                lose: data.lose + 1
+            })
+        }
+    })
     
 }

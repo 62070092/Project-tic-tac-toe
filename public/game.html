@@ -25,13 +25,17 @@
       <img src="./img/PngItem_1963895.png" width="30" height="30" class="d-inline-block align-top" alt="">
       Tic Tac Toe Battle
     </a>
+    <div class="score-show">
+      <div id="score-win">Win : <span>0</span></div>
+      <div id="score-draw">Draw : <span>0</span></div>
+      <div id="score-lose">Lose : <span>0</span></div>
+    </div>
     <button class="btn btn btn-success my-2 my-sm-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">4 elements</button>
   </nav>
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -51,30 +55,30 @@
         <div class="card-group">
           <div class="pic-team">
             <img class="img-team imageBot" src="./img/Will.png" style="transform: scaleX(-1);">
-
             <h2 class="normal-text-size botTeam">Blue Team</h2>
-
           </div>
-          <div class="card">
-            <div class="card-element card-body">
-              <img class="neutral" src=".\img\card-back.png">
+          <!-- <div class="cards"> -->
+            <div class="card">
+              <div class="card-element card-body">
+                <img class="neutral" src=".\img\card-back.png">
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-element card-body">
-              <img class="neutral" src=".\img\card-back.png">
+            <div class="card">
+              <div class="card-element card-body">
+                <img class="neutral" src=".\img\card-back.png">
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-element card-body">
-              <img class="neutral" src=".\img\card-back.png">
+            <div class="card">
+              <div class="card-element card-body">
+                <img class="neutral" src=".\img\card-back.png">
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-element card-body">
-              <img class="neutral" src=".\img\card-back.png">
+            <div class="card">
+              <div class="card-element card-body">
+                <img class="neutral" src=".\img\card-back.png">
+              </div>
             </div>
-          </div>
+          <!-- </div> -->
         </div>
 
         <!-- <button type="button" class="next"><p>4-ELM</p></button> -->
@@ -145,46 +149,48 @@
 
   <div class="battle ">
     <div class="battle-box container">
-      <div class="row justify-content-center mt-3">
-        <div class="col">
-          <h4 class="text-center fs-4">BATTLE</h4>
+      <div class="mt-3">
+        <div class="">
+          <h4 class="text-center fs-4 w-100">BATTLE</h4>
         </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col">
-          <div class="text-result fs-4 text-center"></div>
-        </div>
+      <div class="text-center w-100">
+        <div class="text-result fs-1"></div>
       </div>
-      <div class="row justify-content-center  mt-3">
-        <div class="col-3">
-          <img class="imageBot" src="/public/img/Will.png" style="transform: scaleX(-1);" >
-          <div class="flag-group">
-            <h2 class="normal-text-size botTeam">Blue Team</h2>
+      <div class="mt-3 show-card">
+        <div>
+          <div class="player-popup">
+            <img class="imageBot" src="/public/img/Will.png" style="transform: scaleX(-1);">
+            <div class="flag-group">
+              <h2 class="normal-text-size botTeam">Blue Team</h2>
+            </div>
+          </div>
+          <div class="card-battle ">
+            <img src=".\img\card-1.png" height="150px">
           </div>
         </div>
-        <div class="card-battle col-3">
-          <img src=".\img\card-1.png" width="100%">
-        </div>
-        <div class="card-battle col-3">
-          <img src=".\img\card-1.png" width="100%">
-        </div>
-        <div class="col-3 ">
-          <img class="imagePlayer" src="/public/img/Julia.png" style="transform: scaleX(-1); margin-left: 7vw; height: 124px;;">
-          <div class="flag-group">
-            <h2 class="normal-text-size username-name" style=" margin-left: 6vw;">GUEST</h2>
+        <div>
+          <div class="card-battle ">
+            <img src=".\img\card-1.png" height="150px">
+          </div>
+          <div class="player-popup">
+            <img class="imagePlayer" src="/public/img/Julia.png" style="transform: scaleX(-1); height: 124px;">
+            <div class="flag-group">
+              <h2 class="normal-text-size username-name">GUEST</h2>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row justify-content-center mt-3">
-        <div class="col-4 ">
+      <div class="text-center mt-3">
+        <!-- <div class="col-4 ">
 
+        </div> -->
+        <div>
+          <button class="btn btn btn-success" type="button" onclick="closePopup()">OK</button>
         </div>
-        <div class="col-4">
-          <button class="btn btn btn-success" type="button" onclick="closePopup()" style=" margin-left: 7.5vw;">OK</button>
-        </div>
-        <div class="col-4 ">
+        <!-- <div class="col-4 ">
           
-        </div>
+        </div> -->
       </div>
     </div>
     
@@ -229,9 +235,9 @@
 
       <div class="win-result text-center mt-5"></div>
       <div class="text-center">
-        <button class="btn btn-success" type="button" onclick="window.location.href = 'index.html'">กลับหน้าหลัก</button>
+        <button class="btn btn-success" type="button" onclick="window.location.href = './Choose_team.html'">กลับหน้าหลัก</button>
       
-        <button class="btn btn-success" type="button" onclick="window.location.href = 'game.html'">เล่นใหม่</button>
+        <button class="btn btn-success" type="button" onclick="window.location.href = './game.html'">เล่นใหม่</button>
       </div>
     </div>
   </div>

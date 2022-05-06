@@ -5,6 +5,9 @@ html body{
 html{
     height: 100vh;
 }
+.navbar{
+    padding: 0.5rem;
+}
 .navbar-brand{
     margin:0 2rem;
 }
@@ -14,6 +17,20 @@ html{
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+.input-formm > input{
+    width: 300px
+}
+
+.index-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+}
+.index-box>div{
+    width: 100%;
 }
 /* .container-page-select{
     display: flex;
@@ -50,9 +67,14 @@ html{
 .logo > img{
     width: 8vw;
 }
-.user-form{
-    width: 25vw;
+#btn-logout{
+    position: absolute;
+    top: 25px;
+    right: 25px;
 }
+/* .user-form{
+    width: 25vw;
+} */
 
 .show-name{
 
@@ -75,11 +97,12 @@ html{
     font-family: 'Kanit', sans-serif;
 }
 .team{
-
     border: 5px solid red;
     border-radius: 30px;
 }
-
+#username-team, .score-show{
+    font-family: 'Kanit', sans-serif;
+}
 .char{
 
     height: 30vh;
@@ -116,19 +139,24 @@ html{
 
 /* ----------------------------------------------------- */
 .choose-red{
-    padding: 1rem 0 0 2rem;
+    /* padding: 1rem 0 0 2rem; */
+    padding-top: 1rem;
 }
 .team-red{
     display: flex;
+    justify-content: center;
 }
 .team-red-reverse{
     display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    padding-right: 2rem;
+    justify-content: center;
+    /* padding-right: 2rem; */
+    width: 100%;
 }
 .pic-team{
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
 }
 .pic-team2{
     display: flex;
@@ -168,12 +196,14 @@ html{
 }
 .table-block{
     text-align: center;
+    width: 100px;
+    height: 100px;
 }
 
 table{
     border-collapse: collapse;
-    width: 15vw;
-    height: 15vh;
+    /* width: 15vw;
+    height: 15vh; */
 }
 table, td, tr {
     border: 5px solid #5fcb73 ;
@@ -186,7 +216,9 @@ tr{
 
 
 .img-team{
-    height: 8vw;
+    /* height: 8vw; */
+    height: 100px;
+    width: 65px;
 }
 
 .all_element{
@@ -199,14 +231,13 @@ tr{
     margin-top: 5vh;
     text-align: center;
 }
-
-
 .next{
     display: block;
     margin: auto;
     text-align: center;
-    height: 6vh;
-    width: 10vw;
+    /* height: 6vh; */
+    /* width: 10vw; */
+    padding: 10px 20px;
     margin-top: 8vh;
     border-radius: 12px;
     font-size: 3vh;
@@ -243,12 +274,75 @@ tr{
     align-items: center;
 }
 
+#btn-score{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+#score-popup{
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 0%, .50);
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+}
+#score-popup>div{
+    width: 90vw;
+    height: 90vh;
+    background-color: #96e967;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    overflow-y: auto;
+}
+#score-popup #score-head, #score-popup #score-body>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#score-popup .score-name{
+    width: 70%;
+}
+
+#score-popup #score-head{
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+#score-popup #score-body>div{
+    width: 100%;
+    padding: 5px 0;
+    border-bottom: 2px solid hsl(0, 0%, 0%, .50);
+}
+#btn-close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+#btn-close:hover{
+    color: white;
+    cursor: pointer;
+}
 .battle-box, .win-box{
     width: 60vw;
     height: 50vh;
     background-color: #96e967;
     border-radius: 20px;
    
+}
+.win-box{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px
 }
 .card-battle{
     width: 10vw;
@@ -259,8 +353,37 @@ tr{
     justify-content: center;
 }
 .battle-box > div{
+    /* display: flex;
+    justify-content: center; */
+    gap: 20px;
+    width: 100%;
+    /* text-align: center; */
+}
+.battle-box .show-card{
     display: flex;
-    
+    justify-content: center;
+}
+
+.battle-box .show-card>div:nth-child(1){
+    justify-content: flex-end;
+}
+.card-battle:nth-child(2){
+    text-align: right;
+}
+
+.battle-box .show-card>div{
+    display: flex;
+    /* justify-content: space-around; */
+    width: 100%;
+}
+.player-popup{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.player-popup:nth-child(2){
+    align-items: flex-end;
 }
 .card-layout{
     display: flex;
@@ -269,26 +392,71 @@ tr{
     flex-direction: column;
 }
 
+.score-show{
+    display: flex;
+    gap: 20px;
+}
+.cards{
+    display: flex;
+}
+
 @media (max-width: 768px) {
     table{
         border-collapse: collapse;
-        width: 30%;
+        /* width: 30%; */
     }
     tr{
         height: 8vw;
     }
     .neutral{
-        width: 8vw;
+        width: 90%;
     }
     .img-team{
         height: 15vw;
+    }
+    .card-body{
+        width: calc(100vw / 6);
+        padding: 0;
     }
 }
 
 @media (max-width: 575px) {
     .card-group{
-        display: inline-block;
-        flex-wrap: nowrap;
-        gap: 2vw;
+        justify-content: space-around;
+    }
+    .card{
+        padding: 0;
+    }
+    .battle-box{
+        width: 90vw;
+        height: 90vh;
+    }
+    .battle-box .show-card>div:nth-child(1){
+        flex-direction: column-reverse;
+    }
+    .battle-box .show-card>div{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .card-battle {
+        width: 100%;
+        text-align: center;
+    }
+    .player-popup{
+        align-items: center!important;
+    }
+    .flag-group>h2{
+        font-size: 20px!important;
+    }
+    .win-box{
+        width: 90vw;
+        height: 90vh;
+    }
+    .input-formm > input{
+        width: auto
+    }
+    .pic{
+        width: 75px;
     }
 }
