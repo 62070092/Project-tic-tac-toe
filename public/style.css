@@ -178,6 +178,8 @@ table{
 table, td, tr {
     border: 5px solid #5fcb73 ;
     background-color: #96e967;
+    font-size: 3rem;
+    font-weight: 500;
   }
 
 tr{
